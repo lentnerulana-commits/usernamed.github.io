@@ -71,14 +71,11 @@ body{
 }
 
 .image-box img{
-    width:100%;
-    height:100%;
-
-    object-fit:contain;
-
-    border-radius:16px;
-
-    display:block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 14px;
+    display: block;
 }
 
 /* КНОПКИ */
@@ -86,12 +83,12 @@ body{
 .btn{
     width:100%;
 
-    margin-top:20px;
+    margin-top:14px;
 
     padding:18px;
 
     border:none;
-    border-radius:50px;
+    border-radius:40px;
 
     font-size:28px;
     font-weight:600;
@@ -137,9 +134,9 @@ body{
 /* СЕРДЕЧКИ */
 
 .heart{
-    position:absolute;
+    position:fixed;
 
-    z-index:-1;
+    z-index:999;
 
     pointer-events:none;
 
@@ -184,4 +181,35 @@ body{
             0 0 18px rgba(120,20,70,.25);
     }
 
+}
+
+@media (max-width: 480px) {
+
+    .container{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .title{
+        font-size: 32px;
+    }
+
+    .card{
+        padding: 18px 14px;
+        border-radius: 18px;
+    }
+
+    .image-box{
+        height: 260px;
+        border-width: 4px;
+    }
+
+    .btn{
+        font-size: 20px;
+        padding: 14px;
+    }
+
+    .bottom{
+        font-size: 16px;
+    }
 }
