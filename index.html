@@ -43,7 +43,7 @@
         </button>
 
         <button class="btn white"
-                onclick="heartEffect(); nextPhoto()">
+                onclick="nextPhoto()">
 
             жмякни
 
@@ -120,40 +120,6 @@ function nextPhoto(){
 
 }
 
-/* СЕРДЕЧКИ */
-
-function heartEffect(){
-
-    const count = 80; // 💗 много сердечек
-
-    for(let i = 0; i < count; i++){
-
-        const heart = document.createElement("div");
-        heart.classList.add("heart");
-        heart.innerHTML = "💗";
-
-        // стартовая позиция — центр экрана
-        heart.style.left = (window.innerWidth / 2) + "px";
-        heart.style.top = (window.innerHeight / 2) + "px";
-
-        heart.style.position = "fixed"; // важно: летят по всему экрану
-
-        heart.style.fontSize = (15 + Math.random() * 30) + "px";
-
-        // случайное направление разлёта
-        const x = (Math.random() - 0.5) * 800; // влево/вправо
-        const y = (Math.random() - 1) * 800;   // вверх сильнее
-
-        heart.style.setProperty("--x", x + "px");
-        heart.style.setProperty("--y", y + "px");
-
-        heart.style.animation = "flyBig 2s ease-out forwards";
-
-        document.body.appendChild(heart);
-
-        setTimeout(() => heart.remove(), 2000);
-    }
-}
 
 </script>
 
